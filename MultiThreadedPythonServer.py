@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
  Python base MultiThreadedServer
- This Server is a sigle Threaded and it can backlog the maximum of 1000 client request
+ This Server is a Multi Threaded and it can communicate with any number of clients
  Transmit any Object
 """
 

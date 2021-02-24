@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
   Python base client server
-  can communicate back and forth with a server
+  can communicate back and forth with a server while listing and downloading object
 
 """
 
