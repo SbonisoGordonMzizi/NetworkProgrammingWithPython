@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
   Python base client server
-  can recieve and process any object
+  can communicate back and forth with a server
 
 """
 
@@ -38,7 +38,7 @@ def userInput(clientSocketObject):
         else:
             print(
                 """
-                Enter exit     : to quite the application
+                Enter exit     : to exit the application
                 Enter list     : to list files
                 Enter get      : to download file
                 """)

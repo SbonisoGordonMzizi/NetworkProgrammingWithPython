@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
- Python base Server
- This Server is a sigle Threaded and it can backlog the maximum of 200 client request
+ Python base MultiThreadedServer
+ This Server is a sigle Threaded and it can backlog the maximum of 1000 client request
  Transmit any Object
 """
 
@@ -28,15 +28,15 @@ def requestHandler(clientRequestObject,ipAdderss):
         clientMessage = message.decode("utf-8")
         
         try:
-            if clientMessage[10:] == "list":
+            if clientMessage[HEADERSIZE:] == "list":
                 list_message = "....listing all files in a server...."
                 sendMessageToClient(clientRequestObject,list_message)
                 
-            elif clientMessage[10:] == "get":
+            elif clientMessage[HEADERSIZE:] == "get":
                 get_message = "...downloading file from server..."
                 sendMessageToClient(clientRequestObject,get_message)
             
-            elif clientMessage[10:] == "exit":
+            elif clientMessage[HEADERSIZE:] == "exit":
                 clientRequestObject.close()
                 break
        
