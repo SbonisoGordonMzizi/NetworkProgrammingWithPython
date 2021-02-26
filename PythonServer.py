@@ -11,7 +11,7 @@ import pickle #module used to convert objects to bytes
 HEADERSIZE = 10 #
 
 serverSockerObject = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-serverSockerObject.bind((socket.gethostname(),8080))
+serverSockerObject.bind(("192.168.1.205",8080))
 serverSockerObject.listen(200) #listen and queue up  five request connection 
 
 #main loop of the web server
